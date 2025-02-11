@@ -4,7 +4,7 @@ from .views import CareersBannerViewSet, CareersFormViewSet
 
 router = DefaultRouter()
 router.register(r'careers-banner', CareersBannerViewSet)
-router.register(r'careers-form', CareersFormViewSet, basename='careers-form')
+router.register(r'careers-form', CareersFormViewSet)
 
 urlpatterns = [
     path('',include(router.urls))

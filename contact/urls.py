@@ -4,7 +4,7 @@ from .views import ContactBannerViewSet, ContactFormViewSet
 
 router = DefaultRouter()
 router.register(r'contact-banner', ContactBannerViewSet)
-router.register(r'contact-form', ContactFormViewSet, basename='contact-form')
+router.register(r'contact-form', ContactFormViewSet)
 
 urlpatterns = [
     path('',include(router.urls))

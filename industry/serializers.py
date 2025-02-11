@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import IndustryBanner, IndustryEntry
 
+
 class IndustryEntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = IndustryEntry

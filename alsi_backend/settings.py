@@ -22,12 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-0k3s@b44bvs#60)*m#j5s+(dad49^!e(d&ht97v%0!vnls0$d_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['seocompanyinkerala.in', '194.164.149.249']
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -47,6 +46,7 @@ INSTALLED_APPS = [
     'documentation',
     'home',
     'layouts',
+    'network',
     'services',
     'market',
     'social_media',
@@ -56,8 +56,7 @@ INSTALLED_APPS = [
     'contact',
     'careers',
     'gallery',
-    'django_filters',
-    'our_network',
+    
 ]
 
 MIDDLEWARE = [
@@ -133,26 +132,23 @@ WSGI_APPLICATION = 'alsi_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),  
-        'USER': config('DB_USER'),  
-        'PASSWORD': config('DB_PASSWORD'),  
-        'HOST': config('DB_HOST', default='127.0.0.1'),  
-        'PORT': config('DB_PORT', default='3306'),  
-        'OPTIONS': {
-            'sql_mode': 'STRICT_TRANS_TABLES',  
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'yourdbname',
+#         'USER': 'yourdbuser',
+#         'PASSWORD': 'yourpassword',
+#         'HOST': 'yourdbhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -191,14 +187,6 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Static files (CSS, JavaScript, Images)
-# STATIC_URL = '/static/'
-# STATIC_ROOT = '/var/www/alsi-backend/alsi_backend/staticfiles/'
-
-# Media files (uploaded content)
-# MEDIA_URL = '/media/'  
-# MEDIA_ROOT = '/var/www/alsi-backend/alsi_backend/media/'  
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -206,22 +194,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'authapp.CustomUser'
 
-# Email Settings
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'dl9rtzwyh',
+#     'API_KEY': '632322839243191',
+#     'API_SECRET': 'yzbi-T7iEZeOu4FAoSwtTPy6X3k',
+# }
+
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
-CONTACT_EMAIL_HOST_USER = config('CONTACT_EMAIL_HOST_USER')
-CONTACT_EMAIL_HOST_PASSWORD = config('CONTACT_EMAIL_HOST_PASSWORD')
-
-CAREERS_EMAIL_HOST_USER = config('CAREERS_EMAIL_HOST_USER')
-CAREERS_EMAIL_HOST_PASSWORD = config('CAREERS_EMAIL_HOST_PASSWORD')
-
-# Security settings
-# SECURE_SSL_REDIRECT = True
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
-# X_FRAME_OPTIONS = 'DENY'
-# SECURE_BROWSER_XSS_FILTER = True
-# SECURE_CONTENT_TYPE_NOSNIFF = True
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')

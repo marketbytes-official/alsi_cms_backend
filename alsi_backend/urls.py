@@ -24,6 +24,7 @@ urlpatterns = [
     path('api/', include('authapp.urls')),
     path('api/home/', include('home.urls')),
     path('api/layout/', include('layouts.urls')),
+    path('api/network/', include('network.urls')),
     path('api/service/', include('services.urls')),
     path('api/market/', include('market.urls')),
     path('api/social-media/', include('social_media.urls')),
@@ -33,13 +34,9 @@ urlpatterns = [
     path('api/contact/', include('contact.urls')),
     path('api/careers/', include('careers.urls')),
     path('api/gallery/', include('gallery.urls')),
-    path("api/network/", include('our_network.urls')),
+
     #documentation_swagger
     path('documentation/', include('documentation.urls'))
 ] 
 
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

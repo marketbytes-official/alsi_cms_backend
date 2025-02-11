@@ -27,11 +27,12 @@
         }
         .email-header h2 {
             margin: 0;
-            font-size: 14px;
-            font-weight: 800;
+            font-size: 16px;
         }
         .email-content {
+            margin: 10px 0;
             font-size: 14px;
+            line-height: 1.5;
         }
         table {
             width: 100%;
@@ -46,8 +47,7 @@
         }
         th {
             background-color: #f4f4f4;
-            font-size: 14px;
-            font-weight: 600;
+            font-weight: bold;
             color: #182d70;
         }
     </style>
@@ -78,14 +78,6 @@
                 <tr>
                     <td>Message</td>
                     <td>{{ message }}</td>
-                </tr>
-                <tr>
-                    <td>Referer URL</td>
-                    <td>{{ referer_url }}</td>
-                </tr>
-                <tr>
-                    <td>Submitted URL</td>
-                    <td>{{ submitted_url }}</td>
                 </tr>
             </table>
         </div>

@@ -9,4 +9,6 @@ class CareersBannerSerializer(serializers.ModelSerializer):
 class CareersFormSerializer(serializers.ModelSerializer):
     class Meta:
         model = CareersForm
-        fields = ['id', 'name', 'email', 'phone', 'message', 'referer_url', 'submitted_url', 'file']
+        fields = ['id', 'name', 'email', 'phone_number', 'message']
+
+
