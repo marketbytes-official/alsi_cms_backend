@@ -23,6 +23,10 @@ cd alsi_cms_backend
 python -m venv venv
 venv\Scripts\activate
 ```
+
+![Screenshot 2025-02-11 141312](https://github.com/user-attachments/assets/c8b20756-dbab-43b8-8b3a-ad963a33a811)
+
+
 #### For macOS/Linux:
 ```bash
 python3 -m venv venv
