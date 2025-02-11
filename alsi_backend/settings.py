@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['seocompanyinkerala.in', '194.164.149.249']
-# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['seocompanyinkerala.in', '194.164.149.249']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -186,18 +186,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-# STATIC_URL = 'static/'
+STATIC_URL = 'static/'
 
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-STATIC_ROOT = '/var/www/alsi-backend/alsi_backend/staticfiles/'
+# STATIC_URL = '/static/'
+# STATIC_ROOT = '/var/www/alsi-backend/alsi_backend/staticfiles/'
 
 # Media files (uploaded content)
-MEDIA_URL = '/media/'  # Should be accessible via /media/ in the browser
-MEDIA_ROOT = '/var/www/alsi-backend/alsi_backend/media/'  # Absolute path on the server
+# MEDIA_URL = '/media/'  
+# MEDIA_ROOT = '/var/www/alsi-backend/alsi_backend/media/'  
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -219,9 +219,9 @@ CAREERS_EMAIL_HOST_USER = config('CAREERS_EMAIL_HOST_USER')
 CAREERS_EMAIL_HOST_PASSWORD = config('CAREERS_EMAIL_HOST_PASSWORD')
 
 # Security settings
-SECURE_SSL_REDIRECT = True
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-X_FRAME_OPTIONS = 'DENY'
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
+# SECURE_SSL_REDIRECT = True
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+# X_FRAME_OPTIONS = 'DENY'
+# SECURE_BROWSER_XSS_FILTER = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
