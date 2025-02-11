@@ -24,19 +24,24 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-![Screenshot 2025-02-11 141312](https://github.com/user-attachments/assets/c8b20756-dbab-43b8-8b3a-ad963a33a811)
-
-
 #### For macOS/Linux:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
+
+![Screenshot 2025-02-11 141312](https://github.com/user-attachments/assets/c8b20756-dbab-43b8-8b3a-ad963a33a811)
+
+
 ### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
+
+
+![Screenshot 2025-02-11 141357](https://github.com/user-attachments/assets/b01ddb5c-6a29-4005-9a6c-ac78c1df9b2d)
+
 
 ### 4. Set Up Environment Variables
 Create a `.env` file in the project root and add the required configurations:
@@ -51,18 +56,17 @@ DATABASE_URL=mysql://username:password@localhost/dbname
 python manage.py migrate
 ```
 
-### 6. Create a Superuser (Optional)
-```bash
-python manage.py createsuperuser
-```
-Follow the prompts to set up a superuser account.
-
-### 7. Run the Development Server
+### 6. Run the Development Server
 ```bash
 python manage.py runserver
 ```
 
-### 8. Access the API
+
+![Screenshot 2025-02-11 142256](https://github.com/user-attachments/assets/e591f0d0-e8eb-4bed-b1c2-1fdefffc09cd)
+
+
+
+### 7. Access the API
 Open your browser and go to:
 ```
 http://127.0.0.1:8000/api/
